@@ -25,7 +25,15 @@ body {
 
 .moon{
   margin:auto;
-  animation: circle1 40s linear infinite;
+  animation: circlemoon 40s linear infinite;
+  position: fixed;
+  bottom: 0%;
+  left: 43%;
+}
+
+.moonflip{
+  margin:auto;
+  animation: circlemoonflip 40s linear infinite;
   position: fixed;
   bottom: 0%;
   left: 43%;
@@ -33,28 +41,72 @@ body {
 
 .sun{
   margin:auto;
-  animation: circle2 40s linear infinite;
+  animation: circlesun 40s linear infinite;
   position: fixed;
   bottom: 0%;
   right: 43%;
 }
 
-
-@keyframes circle1{
+@keyframes circlemoon{
   0%{
     transform:rotate(0deg)
               translate(-700px)
               rotate(0deg);
-  
+    opacity: 1;
+  }
+
+  25%{
+    opacity: 1;
+  }
+  25.1%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  75.1%{
+    opacity: 1;
   }
   100%{
     transform:rotate(360deg)
               translate(-700px)
               rotate(-360deg);
+    opacity: 1;
   }
 }
 
-@keyframes circle2{
+@keyframes circlemoonflip{
+  0%{
+    transform:rotate(0deg)
+              translate(-700px)
+              rotate(0deg);
+    opacity: 0;
+  }
+
+  25%{
+    opacity: 0;
+  }
+
+  25.1%{
+    opacity: 1
+  }
+  75%{
+    opacity: 1;
+  }
+  75.1%{
+    opacity: 0;
+  }
+
+  100%{
+    transform:rotate(360deg)
+              translate(-700px)
+              rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+
+@keyframes circlesun{
   0%{
     transform:rotate(0deg)
               translate(700px)
