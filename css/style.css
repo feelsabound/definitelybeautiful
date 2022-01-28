@@ -1,0 +1,69 @@
+body {
+    background-color: transparent;
+    overflow: hidden;
+  }
+  @font-face {
+    font-family: "medieval";
+    src: url('../resources/Sketch Gothic School.ttf') format("truetype");
+  }
+  p.customfont { 
+      font-family: "medieval", Verdana, Tahoma;
+      font-size: xx-large;
+  }
+
+  p {
+    text-align: center;
+  }
+
+.countdown_div{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  transform: translate(-50%, -50%); 
+}
+
+.moon{
+  margin:auto;
+  animation: circle1 40s linear infinite;
+  position: fixed;
+  bottom: 0%;
+  left: 43%;
+}
+
+.sun{
+  margin:auto;
+  animation: circle2 40s linear infinite;
+  position: fixed;
+  bottom: 0%;
+  right: 43%;
+}
+
+
+@keyframes circle1{
+  0%{
+    transform:rotate(0deg)
+              translate(-700px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-700px)
+              rotate(-360deg);
+  }
+}
+
+@keyframes circle2{
+  0%{
+    transform:rotate(0deg)
+              translate(700px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(700px)
+              rotate(-360deg);
+  }
+}
