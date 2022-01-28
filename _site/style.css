@@ -1,0 +1,121 @@
+body {
+    background-color: transparent;
+    overflow: hidden;
+  }
+  @font-face {
+    font-family: "medieval";
+    src: url('resources/Sketch Gothic School.ttf') format("truetype");
+  }
+  p.customfont { 
+      font-family: "medieval", Verdana, Tahoma;
+      font-size: xx-large;
+  }
+
+  p {
+    text-align: center;
+  }
+
+.countdown_div{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  transform: translate(-50%, -50%); 
+}
+
+.moon{
+  margin:auto;
+  animation: circlemoon 40s linear infinite;
+  position: fixed;
+  bottom: 0%;
+  left: 43%;
+}
+
+.moonflip{
+  margin:auto;
+  animation: circlemoonflip 40s linear infinite;
+  position: fixed;
+  bottom: 0%;
+  left: 43%;
+}
+
+.sun{
+  margin:auto;
+  animation: circlesun 40s linear infinite;
+  position: fixed;
+  bottom: 0%;
+  right: 40%;
+}
+
+@keyframes circlemoon{
+  0%{
+    transform:rotate(0deg)
+              translate(-700px)
+              rotate(0deg);
+    opacity: 1;
+  }
+
+  25%{
+    opacity: 1;
+  }
+  25.1%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  75.1%{
+    opacity: 1;
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-700px)
+              rotate(-360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes circlemoonflip{
+  0%{
+    transform:rotate(0deg)
+              translate(-700px)
+              rotate(0deg);
+    opacity: 0;
+  }
+
+  25%{
+    opacity: 0;
+  }
+
+  25.1%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  75.1%{
+    opacity: 0;
+  }
+
+  100%{
+    transform:rotate(360deg)
+              translate(-700px)
+              rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+
+@keyframes circlesun{
+  0%{
+    transform:rotate(0deg)
+              translate(700px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(700px)
+              rotate(-360deg);
+  }
+}
