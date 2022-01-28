@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html>
+<style>
+  body {
+    background-image: url('solyluna.gif');
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+  @font-face {
+    font-family: "medieval";
+    src: url('Sketch Gothic School.ttf') format("truetype");
+  }
+  p.customfont { 
+      font-family: "medieval", Verdana, Tahoma;
+      font-size: xx-large;
+  }
+  p {text-align: center;}
+</style>
 <body>
 
-<h1>My First Heading</h1>
-<p id="demo"></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <p id="countdown" class="customfont"></p>
 
 </body>
 </html>
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+var countDownDate = new Date("Jan 5, 2023 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -28,13 +75,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("countdown").innerHTML = days + " Days<br>" + hours + " Hours<br>"
+  + minutes + " Minutes<br>" + seconds + " Seconds";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
 </script>
