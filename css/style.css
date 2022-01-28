@@ -44,7 +44,7 @@ body {
   animation: circlesun 40s linear infinite;
   position: fixed;
   bottom: 0%;
-  right: 43%;
+  right: 40j%;
 }
 
 @keyframes circlemoon{
@@ -88,7 +88,7 @@ body {
   }
 
   25.1%{
-    opacity: 1
+    opacity: 1;
   }
   75%{
     opacity: 1;

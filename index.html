@@ -1,30 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <link rel="stylesheet" href="css/style.css">
+---
+layout: default
+---
 
-  </head>
+<div class="home">
 
-<body>
-  <div class="moon">
-    <img src="resources/moon.png">
-  </div>
+  <h1 class="page-heading">Posts</h1>
 
-  <div class="moonflip">
-    <img src="resources/moon_flip.png">
-  </div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <div class="sun">
-    <img src="resources/sun.png">
-  </div>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-  <div class="countdown_div">
-    <p id="countdown" class="customfont"></p>
-  </div>
-  
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</body>
-</html>
-
-<script src="js/countdown.js"></script>
-
+</div>
