@@ -27,7 +27,7 @@ body {
   margin:auto;
   animation: circlemoon 40s linear infinite;
   position: fixed;
-  bottom: 0%;
+  top: calc(50% + 200px);
   left: 43%;
 }
 
@@ -35,7 +35,7 @@ body {
   margin:auto;
   animation: circlemoonflip 40s linear infinite;
   position: fixed;
-  bottom: 0%;
+  top: calc(50% + 200px);
   left: 43%;
 }
 
@@ -43,7 +43,7 @@ body {
   margin:auto;
   animation: circlesun 40s linear infinite;
   position: fixed;
-  bottom: 0%;
+  top: calc(50% + 200px);
   right: 40%;
 }
 
