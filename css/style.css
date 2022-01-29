@@ -4,7 +4,7 @@ body {
   }
   @font-face {
     font-family: "medieval";
-    src: url('/resources/Sketch Gothic School.ttf') format("truetype");
+    src: url('Sketch Gothic School.ttf') format("truetype");
   }
   p.customfont { 
       font-family: "medieval", Verdana, Tahoma;
