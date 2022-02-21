@@ -1,21 +1,28 @@
 body {
-    background-color: transparent;
-    overflow: hidden;
-  }
-  @font-face {
-    font-family: "medieval";
-    src: url('Sketch Gothic School.ttf') format("truetype");
-  }
-  p.customfont { 
-      font-family: "medieval", Verdana, Tahoma;
-      font-size: xx-large;
-  }
+  background-color: transparent;
+  overflow: hidden;
+}
 
-  p {
-    text-align: center;
-  }
+@font-face {
+  font-family: "medieval";
+  src: url('Sketch Gothic School.ttf') format("truetype");
+}
+p.customfont { 
+    font-family: "medieval", Verdana, Tahoma;
+    font-size: xx-large;
+}
 
-.countdown_div{
+p {
+  text-align: center;
+}
+
+input.customfont{
+  font-family: "medieval", Verdana, Tahoma;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.center_text_div{
   position: absolute;
   left: 50%;
   top: 50%;
@@ -23,34 +30,43 @@ body {
   transform: translate(-50%, -50%); 
 }
 
+.center_form{
+  text-align: center;
+}
+
 .moon{
   margin:auto;
   animation: circlemoon 40s linear infinite;
   position: fixed;
-  top: calc(50% + 200px);
-  left: 43%;
+  top: calc(50% + 150px);
+  right: calc(50% - 80px);
+  text-align: center;
+
 }
 
 .moonflip{
   margin:auto;
   animation: circlemoonflip 40s linear infinite;
   position: fixed;
-  top: calc(50% + 200px);
-  left: 43%;
+  top: calc(50% + 150px);
+  right: calc(50% - 80px);
+  text-align: center;
 }
 
 .sun{
   margin:auto;
   animation: circlesun 40s linear infinite;
   position: fixed;
-  top: calc(50% + 200px);
-  right: 40%;
+  top: calc(50% + 150px);
+  right: calc(50% - 160px);
+  text-align: center;
+
 }
 
 @keyframes circlemoon{
   0%{
     transform:rotate(0deg)
-              translate(-700px)
+              translate(-600px)
               rotate(0deg);
     opacity: 1;
   }
@@ -69,7 +85,7 @@ body {
   }
   100%{
     transform:rotate(360deg)
-              translate(-700px)
+              translate(-600px)
               rotate(-360deg);
     opacity: 1;
   }
@@ -78,7 +94,7 @@ body {
 @keyframes circlemoonflip{
   0%{
     transform:rotate(0deg)
-              translate(-700px)
+              translate(-600px)
               rotate(0deg);
     opacity: 0;
   }
@@ -99,7 +115,7 @@ body {
 
   100%{
     transform:rotate(360deg)
-              translate(-700px)
+              translate(-600px)
               rotate(-360deg);
     opacity: 0;
   }
@@ -109,13 +125,13 @@ body {
 @keyframes circlesun{
   0%{
     transform:rotate(0deg)
-              translate(700px)
+              translate(600px)
               rotate(0deg);
   
   }
   100%{
     transform:rotate(360deg)
-              translate(700px)
+              translate(600px)
               rotate(-360deg);
   }
 }
