@@ -1,11 +1,44 @@
 body {
-  background-color: transparent;
+  /* background-color: blue; */
   overflow: hidden;
+  animation: fading 40s infinite;
+  animation-play-state: paused;
+}
+.fading {
+  /* -webkit-animation-duration: 1s; */
+  -webkit-animation-name: fading;
+  /* animation-duration: 1s; */
+  animation-name: fading;
+}
+
+@keyframes fading {
+  0% {
+    background-color: hsl(286, 27%, 36%);
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+  }
+  25% {
+      background-color: rgb(5, 1, 26);
+      animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035)
+
+  }
+  50% {
+    background-color: hsl(286, 27%, 36%);
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.50, 0.95)
+
+  }
+  75% {
+    background-color: rgb(63, 125, 241);
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22)
+
+  }
+  100% {
+    background-color: hsl(286, 27%, 36%);
+  }
 }
 
 @font-face {
   font-family: "medieval";
-  src: url('Sketch Gothic School.ttf') format("truetype");
+  src: url('ReynoldsChanceryDeux-JGMm.ttf') format("truetype");
 }
 p.customfont { 
     font-family: "medieval", Verdana, Tahoma;
@@ -20,6 +53,13 @@ input.customfont{
   font-family: "medieval", Verdana, Tahoma;
   font-size: xx-large;
   text-align: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
 }
 
 .center_text_div{
@@ -32,11 +72,14 @@ input.customfont{
 
 .center_form{
   text-align: center;
+  border: none;
+  
 }
 
 .moon{
   margin:auto;
   animation: circlemoon 40s linear infinite;
+  animation-play-state: paused;
   position: fixed;
   top: calc(50% + 150px);
   right: calc(50% - 80px);
@@ -47,6 +90,7 @@ input.customfont{
 .moonflip{
   margin:auto;
   animation: circlemoonflip 40s linear infinite;
+  animation-play-state: paused;
   position: fixed;
   top: calc(50% + 150px);
   right: calc(50% - 80px);
@@ -56,6 +100,7 @@ input.customfont{
 .sun{
   margin:auto;
   animation: circlesun 40s linear infinite;
+  animation-play-state: paused;
   position: fixed;
   top: calc(50% + 150px);
   right: calc(50% - 160px);

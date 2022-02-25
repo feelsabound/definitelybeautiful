@@ -9,31 +9,33 @@
     <source src="resources/waltz_of_the_flowers.mp3" type="audio/mp3">
   </audio>   -->
 
-  <iframe src="resources/waltz_of_the_flowers.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-  <!-- <audio autoplay>
-      <source src="resources/waltz_of_the_flowers.mp3" type="audio/mp3">
-  </audio> -->
+  <!-- <iframe src="resources/waltz_of_the_flowers.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+  <audio id="audio" loop>
+      <source src="resources/waltz_of_the_flowers.mp3" type="audio/mp3" >
+  </audio>
 
 </head>
 
 <body>
-  <div class="moon">
+  <div class="moon" id="moon">
     <img src="resources/moon.png">
   </div>
 
-  <div class="moonflip">
+  <div class="moonflip" id="moonflip">
     <img src="resources/moon_flip.png">
   </div>
 
 
-  <div class="sun">
+  <div class="sun" id="sun">
     <img src="resources/sun.png">
   </div>
 
   <div class="center_text_div">
-    <!-- <p id="countdown" class="customfont"></p> -->
-    <form class= "center_form" action="">
-      <input type="text" id="code1" name="code1" style="border:none;" class="customfont"><br>
+    <p id="countdown" class="customfont" hidden></p>
+
+    <form class="center_form" autocomplete="off" id="codeword_form">
+      <input type="text" id="code1" name="code1" style="border:none;" class="customfont" onclick="playWaltz();"><br>
+      <input type="submit" value="" hidden id="submit">
     </form>
   </div>
 
@@ -41,4 +43,4 @@
 </html>
 
 <script src="js/codewords.js"></script>
-
+<!-- <script src="js/countdown.js"></script> -->
