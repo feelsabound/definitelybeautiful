@@ -1,3 +1,24 @@
+// function checkMobile(){
+//   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//   //...
+//   }
+// }
+
+for (let i = 2; i < 12; i++) {
+  let box = document.getElementById('code' + i)
+  box.classList.add('visuallyhidden');    
+  box.classList.add('hidden');
+  box.style.transitionDuration = "1.5s"
+}
+
+
+window.addEventListener("load", function(){
+  //everything is fully loaded, don't use me if you can use DOMContentLoaded
+  document.getElementById("code1").style.display = "block"
+
+
+});  
+
 function playWaltz() {
     var sound = document.getElementById("audio");
     sound.play();
@@ -14,15 +35,30 @@ function submitAction(event)
     event.preventDefault();
     console.log(document.getElementById("code1").value)
 
-    document.getElementById("codeword_form").style.top = '23%'
+    let code1 = document.getElementById("code1").value.toLowerCase()
+    if (code1 == "osteospermum fruticosum") {
+      document.getElementById("codeword_form").style.top = '23%'
 
-
-    if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("code1", "Smith");
-      } else {
-        // Sorry! No Web Storage support..
+      for (let i = 2; i < 12; i++) {
+        let box = document.getElementById('code' + i)  
+        box.classList.remove('hidden');
+        setTimeout(function () {
+          box.classList.remove('visuallyhidden');
+        }, 20);
       }
-    return false
+  
+      
+  
+  
+      if (typeof(Storage) !== "undefined") {
+          localStorage.setItem("code1", "Smith");
+        } else {
+          console.log("Sorry! No Web Storage support..")
+        }
+      return false
+    }
+
+
 }
 
 
