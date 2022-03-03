@@ -14,6 +14,9 @@ function submitAction(event)
     event.preventDefault();
     console.log(document.getElementById("code1").value)
 
+    document.getElementById("codeword_form").style.top = '23%'
+
+
     if (typeof(Storage) !== "undefined") {
         localStorage.setItem("code1", "Smith");
       } else {

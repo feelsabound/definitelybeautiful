@@ -53,27 +53,47 @@ input.customfont{
   font-family: "medieval", Verdana, Tahoma;
   font-size: xx-large;
   text-align: center;
-  background-color: transparent;
-  border: none;
   color: white;
+  background-color: transparent;
+
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: white;
+  transition: border-width 2s linear;
 }
 
 input:focus, textarea:focus, select:focus{
   outline: none;
 }
 
+/* input{
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: transparent;
+  border-bottom-width: 5px;
+  transition: border-width 2s linear;
+} */
+
 .center_text_div{
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: auto;
-  transform: translate(-50%, -50%); 
+  left: calc(50% - 150px);
+  /* top: 50%; */
+  width: 300px;
+  height: 900px;
+  /* transform: translate(-50%, -50%);  */
 }
 
 .center_form{
+  position: relative;
   text-align: center;
-  border: none;
-  
+  top: 50%;
+  border: none; 
+  transition: top 2s;
 }
 
 .moon{
