@@ -1,14 +1,8 @@
-// function checkMobile(){
-//   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//   //...
-//   }
-// }
 
 for (let i = 2; i < 12; i++) {
   let box = document.getElementById('code' + i)
   box.classList.add('visuallyhidden');    
   box.classList.add('hidden');
-  box.style.transitionDuration = "1.5s"
 }
 
 
@@ -16,6 +10,10 @@ window.addEventListener("load", function(){
   //everything is fully loaded, don't use me if you can use DOMContentLoaded
   document.getElementById("code1").style.display = "block"
 
+  for (let i = 2; i < 12; i++) {
+    let box = document.getElementById('code' + i)
+    box.style.transitionDuration = "1.5s"
+  }
 
 });  
 
