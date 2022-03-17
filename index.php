@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<script src="js/checkmobile.js"></script>
+
+<html>
+  <head>
+  <link rel="stylesheet" href="css/style.css">
+
+  <audio id="audio" loop>
+      <source src="resources/waltz_of_the_flowers.mp3" type="audio/mp3" >
+  </audio>
+
+</head>
+
+<body>
+  <div class="moon" id="moon">
+    <img src="resources/moon.png">
+  </div>
+
+  <div class="moonflip" id="moonflip">
+    <img src="resources/moon_flip.png">
+  </div>
+
+
+  <div class="sun" id="sun">
+    <img src="resources/sun.png">
+  </div>
+
+  <div class="center_text_div">
+    <p id="countdown" class="customfont" hidden></p>
+
+    <form class="center_form" autocomplete="off" id="codeword_form" spellcheck="false">
+      <input type="text" id="code1" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code2" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code3" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code4" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code5" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code6" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code7" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code8" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code9" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code10" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code11" class="customfont" onclick="playWaltz();"><br>
+      <input type="text" id="code12" class="customfont" onclick="playWaltz();"><br>
+      <input type="submit" value="" hidden id="submit">
+    </form>
+  </div>
+
+</body>
+</html>
+
+<script src="js/codewords.js"></script>
+<!-- <script src="js/countdown.js"></script> -->
