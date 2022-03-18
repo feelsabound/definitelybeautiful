@@ -68,7 +68,23 @@ function code1func(event){
 
     code1_element.disabled = true
     code1_element.style.textDecoration = 'line-through'
+    sendEmail(event.target.value)
   }
+}
+
+function sendEmail(code_str) {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "feelsabound@gmail.com",
+    Password: "f33ls@bound",
+    To: 'arielja87@gmail.com',
+    From: "feelsabound@gmail.com",
+    Subject: "A code has been entered",
+    Body: "Code entered: " + code_str,
+  })
+    .then(function (message) {
+      alert("mail sent successfully")
+    });
 }
 
 function codex_func(event){
@@ -80,6 +96,7 @@ function codex_func(event){
         localStorage.setItem('code2', 'code2')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code3':
@@ -88,6 +105,7 @@ function codex_func(event){
         localStorage.setItem('code3', 'code3')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code4':
@@ -96,6 +114,7 @@ function codex_func(event){
         localStorage.setItem('code4', 'code4')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code5':
@@ -104,6 +123,7 @@ function codex_func(event){
         localStorage.setItem('code5', 'code5')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code6':
@@ -112,6 +132,7 @@ function codex_func(event){
         localStorage.setItem('code6', 'code6')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code7':
@@ -120,6 +141,7 @@ function codex_func(event){
         localStorage.setItem('code7', 'code7')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code8':
@@ -128,6 +150,7 @@ function codex_func(event){
         localStorage.setItem('code8', 'code8')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code9':
@@ -136,6 +159,7 @@ function codex_func(event){
         localStorage.setItem('code9', 'code9')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code10':
@@ -144,6 +168,7 @@ function codex_func(event){
         localStorage.setItem('code10', 'code10')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code11':
@@ -152,6 +177,7 @@ function codex_func(event){
         localStorage.setItem('code11', 'code11')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
     case 'code12':
@@ -160,6 +186,7 @@ function codex_func(event){
         localStorage.setItem('code12', 'code12')
         event.target.disabled = true
         event.target.style.textDecoration = 'line-through'
+        sendEmail(event.target.value)
       }
       break;
   }
