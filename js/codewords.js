@@ -58,6 +58,7 @@ function code1func(event){
 
     localStorage.setItem('code_level', 1)
     localStorage.setItem('code1', 'code1')
+    localStorage.setItem('user', 'user_' + Date.now().toString())
 
     for (let i = 2; i < 13; i++) {
       let box = document.getElementById('code' + i)  
@@ -74,6 +75,7 @@ function code1func(event){
 }
 
 function sendEmail(code_str) {
+  let user = localStorage.getItem("user")
   Email.send({
     Host: "smtp.gmail.com",
     Username: "feelsabound@gmail.com",
@@ -81,7 +83,7 @@ function sendEmail(code_str) {
     To: 'arielja87@gmail.com',
     From: "feelsabound@gmail.com",
     Subject: "A code has been entered",
-    Body: "Code entered: " + code_str,
+    Body: user + " entered: " + code_str
   });
     // .then(function (message) {
     //   alert("mail sent successfully")
