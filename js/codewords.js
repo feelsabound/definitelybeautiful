@@ -9,7 +9,7 @@ if (isNaN(code_level)){
     box.classList.add('hidden');
   }
 } else {
-  document.getElementById("codeword_form").style.top = '23%'
+  document.getElementById("codeword_form").style.top = '5%'
 
   for (let i = 1; i < code_level+1; i++) {
     code_str = 'code' + i
@@ -54,11 +54,12 @@ function code1func(event){
   code1_element = document.getElementById("code1")
   let code1 = code1_element.value.toLowerCase()
   if (code1 == "code1") {
-    document.getElementById("codeword_form").style.top = '23%'
+    document.getElementById("codeword_form").style.top = '5%'
+
     localStorage.setItem('code_level', 1)
     localStorage.setItem('code1', 'code1')
 
-    for (let i = 2; i < 12; i++) {
+    for (let i = 2; i < 13; i++) {
       let box = document.getElementById('code' + i)  
       box.classList.remove('hidden');
       setTimeout(function () {
@@ -81,10 +82,10 @@ function sendEmail(code_str) {
     From: "feelsabound@gmail.com",
     Subject: "A code has been entered",
     Body: "Code entered: " + code_str,
-  })
-    .then(function (message) {
-      alert("mail sent successfully")
-    });
+  });
+    // .then(function (message) {
+    //   alert("mail sent successfully")
+    // });
 }
 
 function codex_func(event){

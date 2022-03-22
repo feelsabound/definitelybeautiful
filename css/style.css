@@ -94,8 +94,9 @@ input:focus, textarea:focus, select:focus{
   left: calc(50% - 150px);
   /* top: 50%; */
   width: 300px;
-  height: 900px;
+  height: 1200px;
   /* transform: translate(-50%, -50%);  */
+  overflow: visible;
 }
 
 .center_form{
